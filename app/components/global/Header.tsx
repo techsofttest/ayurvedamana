@@ -2,17 +2,24 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import StyledButton from "./StyledButton";
+import { usePathname } from "next/navigation";
+import StyledButton from "../ui/StyledButton";
 
 interface HeaderProps {
   onOpenBooking: () => void;
+  forceSolid?: boolean;
 }
 
-export default function Header({ onOpenBooking }: HeaderProps) {
-  const [scrolled, setScrolled] = useState(false);
+export default function Header({ onOpenBooking, forceSolid = false }: HeaderProps) {
+  const [scrolled, setScrolled] = useState(forceSolid);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
+    if (forceSolid) {
+      setScrolled(true);
+      return;
+    }
     const handleScroll = () => {
       if (window.scrollY > 40) {
         setScrolled(true);
@@ -22,7 +29,7 @@ export default function Header({ onOpenBooking }: HeaderProps) {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [forceSolid]);
 
   return (
     <>
@@ -155,27 +162,23 @@ export default function Header({ onOpenBooking }: HeaderProps) {
                 {/* Level 2: Main Navigation Links */}
                 <nav className="flex items-center space-x-5 pt-2">
                   {[
-                    { label: "Home", href: "#", active: true },
-                    { label: "History", href: "#why-choose" },
-                    { label: "Physicians", href: "#why-choose" },
-                    { label: "Therapies", href: "#treatments" },
+                    { label: "Home", href: "/" },
+                    { label: "History", href: "/history" },
+                    { label: "Physicians", href: "/physicians" },
+                    { label: "Therapies", href: "/therapies" },
                     { label: "Special Treatments", href: "#treatments" },
                     { label: "Wellness Treatments", href: "#wellness-packages" },
                     { label: "Packages", href: "#wellness-packages" },
                     { label: "Facilities", href: "#facilities" },
                     { label: "Contact Us", href: "#footer" },
                   ].map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.href}
-                      className={`text-[12px] font-bold uppercase tracking-wider relative group py-2 transition-colors duration-200 ${link.active
-                        ? "text-[#b38e5d]"
-                        : "text-[#3D0004]/85 hover:text-[#b38e5d]"
-                        }`}
-                    >
+                    <a key={link.label} href={link.href} className={`text-[12px] font-bold uppercase tracking-wider relative group py-2 transition-colors duration-200 ${pathname === link.href
+                      ? "text-[#b38e5d]"
+                      : "text-[#3D0004]/85 hover:text-[#b38e5d]"
+                      }`}>
                       {link.label}
-                      <span className={`absolute bottom-0 left-0 h-0.5 bg-[#b38e5d] transition-all duration-300 ${link.active ? "w-full" : "w-0 group-hover:w-full"
-                        }`}></span>
+                      <span className={`absolute bottom-0 left-0 h-0.5 bg-[#b38e5d] transition-all duration-300 ${pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+                        }`} />
                     </a>
                   ))}
                 </nav>
@@ -254,8 +257,8 @@ export default function Header({ onOpenBooking }: HeaderProps) {
                 {/* Navigation Links */}
                 <nav className="flex flex-col space-y-4 md:space-y-6 md:w-1/2">
                   {[
-                    { label: "Home", href: "#" },
-                    { label: "History", href: "#why-choose" },
+                    { label: "Home", href: "/" },
+                    { label: "History", href: "/history" },
                     { label: "Physicians", href: "#why-choose" },
                     { label: "Therapies", href: "#treatments" },
                     { label: "Special Treatments", href: "#treatments" },

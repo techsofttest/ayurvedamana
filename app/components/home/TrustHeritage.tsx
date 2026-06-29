@@ -3,7 +3,7 @@
 import { FaWhatsapp } from "react-icons/fa6";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import StyledButton from "./StyledButton";
+import StyledButton from "../ui/StyledButton";
 import Image from "next/image";
 
 export default function TrustHeritage() {

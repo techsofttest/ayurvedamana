@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import StyledButton from "./StyledButton";
+import StyledButton from "../ui/StyledButton";
 
 interface FooterProps {
   onOpenBooking?: () => void;

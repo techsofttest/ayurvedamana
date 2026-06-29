@@ -5,7 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import StyledButton from "./StyledButton";
+import StyledButton from "../ui/StyledButton";
 
 const WHY_CHOOSE_US_ITEMS = [
     {

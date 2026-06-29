@@ -1,6 +1,6 @@
 "use client";
 
-import StyledButton from "./StyledButton";
+import StyledButton from "../ui/StyledButton";
 
 export default function WhatsAppFloat() {
   const whatsappUrl = "https://wa.me/919645095696?text=Hello%20Ayurvedamana,%20I%20would%20like%20to%20enquire%20about%20your%20Ayurvedic%20treatments.";

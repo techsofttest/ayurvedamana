@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import StyledButton from "./StyledButton";
+import StyledButton from "../ui/StyledButton";
 import Image from "next/image";
 
 export default function ProductBanner() {

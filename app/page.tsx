@@ -1,17 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import TrustHeritage from "./components/TrustHeritage";
-import TreatmentsBento from "./components/TreatmentsBento";
-import SuccessStories from "./components/SuccessStories";
-import ProductBanner from "./components/ProductBanner";
-import Footer from "./components/Footer";
-import VirtualTour from "./components/VirtualTour";
-import Facilities from "./components/Facilities";
-import WhyChooseCarousel from "./components/WhyChooseCarousel";
-import BookingModal from "./components/BookingModal";
+import Header from "./components/global/Header";
+import Hero from "./components/home/Hero";
+import TrustHeritage from "./components/home/TrustHeritage";
+import TreatmentsBento from "./components/home/TreatmentsBento";
+import SuccessStories from "./components/home/SuccessStories";
+import ProductBanner from "./components/home/ProductBanner";
+import Footer from "./components/global/Footer";
+import VirtualTour from "./components/home/VirtualTour";
+import Facilities from "./components/home/Facilities";
+import WhyChooseCarousel from "./components/home/WhyChooseCarousel";
+import BookingModal from "./components/ui/BookingModal";
 
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
