@@ -151,9 +151,11 @@ export default function Footer({ onOpenBooking }: FooterProps) {
                 { label: "Home", href: "#" },
                 { label: "About Us", href: "#why-choose" },
                 { label: "Treatments", href: "#treatments" },
-                { label: "Wellness Packages", href: "#wellness-packages" },
-                { label: "Facilities", href: "#facilities" },
-                { label: "Contact Us", href: "#footer" },
+                { label: "Wellness Treatments", href: "/wellness-treatments" },
+                { label: "Facilities", href: "/facilities" },
+                { label: "Gallery", href: "/gallery" },
+                { label: "Video Gallery", href: "/video-gallery" },
+                { label: "Contact Us", href: "/contact" },
               ].map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-xs text-[#3D0004]/75 hover:text-[#b38e5d] transition-colors font-light">

@@ -38,7 +38,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
       <div className="absolute inset-0" onClick={onClose}></div>
 
       {/* Modal Container */}
-      <div className="relative z-10 w-full max-w-xl bg-[#faf8f5] text-[#3D0004] border border-[#680007]/15 shadow-xl p-8 md:p-10 font-sans animate-slide-up">
+      <div className="relative z-10 w-full max-w-xl bg-[#faf8f5] text-[#3D0004] border border-[#680007]/15 shadow-xl p-8 md:p-10 font-serif animate-slide-up">
         {/* Close Button */}
         <button
           onClick={onClose}

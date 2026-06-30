@@ -16,7 +16,9 @@ import BookingModal from "./components/ui/BookingModal";
 export default function Home() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
-  const openBooking = () => setIsBookingOpen(true);
+  const openBooking = () => {
+    window.location.href = "/online-consultation";
+  };
   const closeBooking = () => setIsBookingOpen(false);
 
   return (

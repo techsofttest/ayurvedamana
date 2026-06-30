@@ -38,6 +38,14 @@ export const ASHTA_VIDYA_PROFILES = [
             "The last Kutipraveshikam in the history of Ayurveda was performed by him some fifty years ago. Supervised by his father and assisted by his son, he performed Kutipraveshikam for his friend and close companion, the late Poomully Vasudevan Namboodiripad. He took up many a complicated case which other physicians dared not and he displayed an intense passion while dealing with various cases. The honorary title of VAIDYASHASTRA MAHODADHI was conferred on him by Sree Sree Kanchikamakoti Matathipathi Sree Jayendra Saraswathi Swamikal, for his outstanding contributions to Ayurveda."
         ],
         image: "/ashta-vidya-linage/Rishikumaran Namboothiri.jpg"
+    },
+    {
+        id: "rajeev-nampoothiri",
+        name: "ASHTA VAIDYAN VAIDYAMADOM DOCTOR RAJEEV NAMPOOTHIRI",
+        description: [
+            "Dr. Rajeev Nampoothiri is a distinguished physician deeply rooted in the Ashtavaidya tradition, which signifies mastery over the eight branches of Ayurveda. With over 35 years of clinical experience, he is a versatile medical expert with profound knowledge in Ayurveda. He holds a BAMS (Ayurvedacharya) and an MD in Ayurveda (Dravya Guna). [1] His commitment to advancing the field is evident through his roles as an Advisory Member for the National Ayush Mission in Kerala and as a Principal Assessor for NABH (AYUSH). Dr. Nampoothiri has also contributed as a teacher, author of healthcare articles, and a presenter at numerous national and international seminars, embodying the scholarly and practical excellence of the Ashtavaidya lineage."
+        ],
+        image: "/ashta-vidya-linage/Rajeev Nampoothiri.jpg"
     }
 ];
 
@@ -71,7 +79,7 @@ export const OTHER_DOCTORS = [
         id: "priyanka",
         name: "DR.PRIYANKA.BSC.BAMS: MEDICAL OFFICER",
         description: "Granddaughter of late Madayi Kunjiramaran Vaidyar. Completed her academic qualification from Rajiv Gandhi Ayurveda Medical College, Mahe. afflicted to Pondicherry University. She started her career as a junior doctor with Dr.Thamban (Retd chief medical officer, head of the institution of health services, govt. of Puducherry state.) Then she got a chance to work with Dr.Devan Namboothiri at Poomully Mana.. During the pandemic time, she worked in Ayur Raksha clinics. After that, she worked at Sanjeevani multi-specialty ayurveda hospital, Thalassery.",
-        image: "/other-doctors/dr-priyanka.jpg"
+        image: "/other-doctors/dr-priyanka2.jpg"
     },
     {
         id: "amrutha",

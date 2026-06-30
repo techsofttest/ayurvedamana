@@ -75,7 +75,7 @@ export default function Testimonials() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      id="testimonials" className="w-full text-[#3D0004] font-sans py-16 md:py-24 bg-transparent"
+      id="testimonials" className="w-full text-[#3D0004] font-serif py-16 md:py-24 bg-transparent"
     >
       <div className="max-w-4xl mx-auto px-6 md:px-12 text-center flex flex-col items-center">
         <div className="flex flex-col items-center text-center space-y-2 mb-16">

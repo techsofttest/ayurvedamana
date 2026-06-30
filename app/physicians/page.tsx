@@ -12,7 +12,9 @@ import OtherDoctorsSection from "../components/physicians/OtherDoctorsSection";
 export default function PhysiciansPage() {
     const [isBookingOpen, setIsBookingOpen] = useState(false);
 
-    const openBooking = () => setIsBookingOpen(true);
+    const openBooking = () => {
+        window.location.href = "/online-consultation";
+    };
     const closeBooking = () => setIsBookingOpen(false);
 
     return (

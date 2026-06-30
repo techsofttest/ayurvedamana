@@ -292,7 +292,7 @@ export default function TreatmentsBento() {
           <div className="absolute inset-0" onClick={() => setSelectedItem(null)}></div>
 
           {/* Sidebar Details Drawer */}
-          <div className="relative z-10 w-full max-w-xl h-full bg-[#faf8f5] text-[#3D0004] border-l border-[#680007]/15 shadow-xl p-8 md:p-12 overflow-y-auto flex flex-col justify-between font-sans animate-slide-left">
+          <div className="relative z-10 w-full max-w-xl h-full bg-[#faf8f5] text-[#3D0004] border-l border-[#680007]/15 shadow-xl p-8 md:p-12 overflow-y-auto flex flex-col justify-between font-serif animate-slide-left">
             <div>
               {/* Close Drawer Button */}
               <div className="flex justify-between items-center mb-8 border-b border-[#680007]/10 pb-4">

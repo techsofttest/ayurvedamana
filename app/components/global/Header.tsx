@@ -34,7 +34,7 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-70 w-full transition-all duration-300 font-sans ${scrolled
+        className={`fixed top-0 left-0 right-0 z-70 w-full transition-all duration-300 font-serif ${scrolled
           ? "bg-[#faf8f5]/95 backdrop-blur-md border-b border-[#680007]/10 shadow-xs"
           : "bg-transparent border-b border-transparent"
           }`}
@@ -81,7 +81,7 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
             {/* Right End: CTA Button */}
             <div>
               <StyledButton
-                onClick={onOpenBooking}
+                href="/online-consultation"
                 variant="secondary"
                 className="text-white border-1 border-white/20 hover:bg-white/10 hover:text-white"
               >Book Consultation</StyledButton>
@@ -111,7 +111,7 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
                 <div className="flex p-4 items-center transition-all duration-300 rounded-b-lg bg-[#3D0004]/5">
                   {/* Products Block */}
                   <a
-                    href="#treatments"
+                    href="/products"
                     className="flex items-center space-x-1.5 px-4 text-[10px] font-semibold uppercase tracking-wider border-l transition-colors text-[#3D0004] hover:text-[#b38e5d] border-[#680007]/10"
                   >
                     <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -145,8 +145,8 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
                   </a>
 
                   {/* Online Consultation Block (CTA) */}
-                  <button
-                    onClick={onOpenBooking}
+                  <a
+                    href="/online-consultation"
                     className="flex items-center space-x-1.5 px-4 text-[10px] font-semibold uppercase tracking-wider border-l border-r cursor-pointer transition-colors text-[#3D0004] hover:text-[#b38e5d] border-[#680007]/10"
                   >
                     <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -156,7 +156,7 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
                       <path d="M16 3.13a4 4 0 1 1 0 7.75" />
                     </svg>
                     <span>Online Consultation</span>
-                  </button>
+                  </a>
                 </div>
 
                 {/* Level 2: Main Navigation Links */}
@@ -166,15 +166,15 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
                     { label: "History", href: "/history" },
                     { label: "Physicians", href: "/physicians" },
                     { label: "Therapies", href: "/therapies" },
-                    { label: "Special Treatments", href: "#treatments" },
-                    { label: "Wellness Treatments", href: "#wellness-packages" },
-                    { label: "Packages", href: "#wellness-packages" },
-                    { label: "Facilities", href: "#facilities" },
-                    { label: "Contact Us", href: "#footer" },
+                    { label: "Special Treatments", href: "/special-treatments" },
+                    { label: "Wellness Treatments", href: "/wellness-treatments" },
+                    { label: "Packages", href: "/packages" },
+                    { label: "Facilities", href: "/facilities" },
+                    { label: "Contact Us", href: "/contact" },
                   ].map((link) => (
                     <a key={link.label} href={link.href} className={`text-[12px] font-bold uppercase tracking-wider relative group py-2 transition-colors duration-200 ${pathname === link.href
-                      ? "text-[#b38e5d]"
-                      : "text-[#3D0004]/85 hover:text-[#b38e5d]"
+                      ? "text-[#A15F08]"
+                      : "text-[#3D0004]/85 hover:text-[#A15F08]"
                       }`}>
                       {link.label}
                       <span className={`absolute bottom-0 left-0 h-0.5 bg-[#b38e5d] transition-all duration-300 ${pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
@@ -186,12 +186,12 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
 
               {/* Mobile Hamburger menu & Quick CTA */}
               <div className="xl:hidden flex items-center space-x-3 pt-3">
-                <button
-                  onClick={onOpenBooking}
-                  className="px-4 py-2 text-[10px] uppercase font-bold tracking-widest rounded-sm transition-all duration-300 border cursor-pointer bg-[#680007] hover:bg-[#3D0004] text-[#faf8f5] border-[#680007]"
+                <a
+                  href="/online-consultation"
+                  className="px-4 py-2 text-[10px] uppercase font-bold tracking-widest rounded-sm transition-all duration-300 border cursor-pointer bg-[#680007] hover:bg-[#3D0004] text-[#faf8f5] border-[#680007] flex items-center justify-center"
                 >
                   Book
-                </button>
+                </a>
 
                 <button
                   onClick={() => setMobileMenuOpen(true)}
@@ -288,14 +288,14 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
                 <div className="hidden md:flex flex-col justify-center items-end max-w-sm text-right space-y-10 pl-8 mt-12 md:mt-0">
                   <div>
                     <h3 className="text-[#c8ab80] font-serif text-3xl mb-4">Healing Naturally</h3>
-                    <p className="text-white/70 font-sans font-light leading-relaxed">
+                    <p className="text-white/70 font-serif font-light leading-relaxed">
                       Experience over a century of traditional Ayurvedic wisdom in our NABH Accredited heritage mana.
                     </p>
                   </div>
 
                   <div className="flex flex-col items-end space-y-4 w-full">
                     <a
-                      href="#treatments"
+                      href="/products"
                       onClick={() => setMobileMenuOpen(false)}
                       className="w-full px-8 py-4 flex items-center justify-center space-x-3 bg-[#c8ab80] hover:bg-[#faf8f5] text-[#3D0004] rounded-sm text-sm font-bold uppercase tracking-widest transition-colors"
                     >
@@ -305,11 +305,9 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
                       <span>Products Store</span>
                     </a>
 
-                    <button
-                      onClick={() => {
-                        setMobileMenuOpen(false);
-                        onOpenBooking();
-                      }}
+                    <a
+                      href="/online-consultation"
+                      onClick={() => setMobileMenuOpen(false)}
                       className="w-full px-8 py-4 flex items-center justify-center space-x-3 bg-transparent hover:bg-white/5 text-[#faf8f5] border border-white/20 rounded-sm text-sm font-bold uppercase tracking-widest transition-all"
                     >
                       <svg className="w-5 h-5" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -319,7 +317,7 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
                         <path d="M16 3.13a4 4 0 1 1 0 7.75" />
                       </svg>
                       <span>Online Consultation</span>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -327,7 +325,7 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
               {/* Mobile Quick Contact */}
               <div className="md:hidden pt-8 border-t border-white/10 space-y-4 mt-8">
                 <a
-                  href="#treatments"
+                  href="/products"
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full flex items-center justify-center space-x-2 bg-[#c8ab80] hover:bg-[#faf8f5] text-[#3D0004] py-3 rounded-sm text-xs font-bold uppercase tracking-widest transition-colors"
                 >
@@ -337,11 +335,9 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
                   <span>Products Store</span>
                 </a>
 
-                <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    onOpenBooking();
-                  }}
+                <a
+                  href="/online-consultation"
+                  onClick={() => setMobileMenuOpen(false)}
                   className="w-full flex items-center justify-center space-x-2 bg-[#680007] hover:bg-[#3D0004] text-[#faf8f5] py-3 rounded-sm text-xs font-bold uppercase tracking-widest border border-white/15 cursor-pointer transition-colors"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -351,7 +347,7 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
                     <path d="M16 3.13a4 4 0 1 1 0 7.75" />
                   </svg>
                   <span>Online Consultation</span>
-                </button>
+                </a>
               </div>
 
               {/* Footer Area */}

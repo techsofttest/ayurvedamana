@@ -86,7 +86,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
   return (
     <motion.section
       ref={heroRef}
-      className="relative w-full h-[90vh] min-h-[480px] lg:min-h-[520px] overflow-hidden bg-[#3D0004] font-sans"
+      className="relative w-full h-[90vh] min-h-[480px] lg:min-h-[520px] overflow-hidden bg-[#3D0004] font-serif"
       style={{ scale, borderRadius, opacity }}
     >
       <style>{`

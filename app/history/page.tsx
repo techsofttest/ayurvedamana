@@ -11,7 +11,9 @@ import HistoryCarousel from "../components/history/HistoryCarousel";
 export default function HistoryPage() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
-  const openBooking = () => setIsBookingOpen(true);
+  const openBooking = () => {
+    window.location.href = "/online-consultation";
+  };
   const closeBooking = () => setIsBookingOpen(false);
 
   return (

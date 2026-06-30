@@ -43,7 +43,7 @@ export default function TrustHeritage() {
         <motion.section
             ref={sectionRef}
             id="why-choose"
-            className="relative w-full bg-transparent text-[#132b15] font-sans overflow-hidden"
+            className="relative w-full bg-transparent text-[#132b15] font-serif overflow-hidden"
         >
 
             {/* Background Layers: Gradient and Cloud Texture separated for reliability */}
@@ -115,7 +115,7 @@ export default function TrustHeritage() {
                 >
                     <div className="max-w-lg mx-auto py-2 px-6 mb-4 bg-[#faf8f5]/80 backdrop-blur-md border border-[#680007]/10 rounded-full shadow-2xl flex items-center justify-center space-x-8">
                         <StyledButton
-                            href="#footer"
+                            href="/online-consultation"
                             className="flex-1 !text-md text-white"
                         >
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>

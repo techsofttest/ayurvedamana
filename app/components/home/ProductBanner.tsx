@@ -5,7 +5,11 @@ import { useState } from "react";
 import StyledButton from "../ui/StyledButton";
 import Image from "next/image";
 
-export default function ProductBanner() {
+interface ProductBannerProps {
+  showViewAllLink?: boolean;
+}
+
+export default function ProductBanner({ showViewAllLink = true }: ProductBannerProps) {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
@@ -225,11 +229,13 @@ export default function ProductBanner() {
         </div>
 
         {/* View All Products Button (Right Aligned) */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50">
-          <StyledButton href="/products" variant="secondary" className="text-white border-1 border-white hover:bg-white/10 hover:text-white">
-            View All Products
-          </StyledButton>
-        </div>
+        {showViewAllLink && (
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50">
+            <StyledButton href="/products" variant="secondary" className="text-white border-1 border-white hover:bg-white/10 hover:text-white">
+              View All Products
+            </StyledButton>
+          </div>
+        )}
 
       </div>
     </motion.section>

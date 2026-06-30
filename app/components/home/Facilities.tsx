@@ -10,7 +10,7 @@ const FACILITIES = [
 
 export default function Facilities() {
   return (
-    <section id="facilities" className="w-full text-[#3D0004] font-sans py-16 md:py-24 bg-transparent">
+    <section id="facilities" className="w-full text-[#3D0004] font-serif py-16 md:py-24 bg-transparent">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
