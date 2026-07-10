@@ -148,17 +148,11 @@ export default function Footer({ onOpenBooking }: FooterProps) {
             </h4>
             <ul className="space-y-2.5">
               {[
-                { label: "Home", href: "#" },
-                { label: "About Us", href: "#why-choose" },
-                { label: "Treatments", href: "#treatments" },
+                { label: "Home", href: "/" },
+                { label: "Why Choose Us", href: "/why-choose-us" },
                 { label: "Wellness Treatments", href: "/wellness-treatments" },
                 { label: "Facilities", href: "/facilities" },
-                { label: "Gallery", href: "/gallery" },
-                { label: "Video Gallery", href: "/video-gallery" },
                 { label: "Contact Us", href: "/contact" },
-                { label: "Joint Venture", href: "/joint-venture" },
-                { label: "Ayurveda", href: "/ayurveda" },
-                { label: "Nearby Places", href: "/nearby-places" },
               ].map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-xs text-[#3D0004]/75 hover:text-[#b38e5d] transition-colors font-light">
@@ -176,11 +170,12 @@ export default function Footer({ onOpenBooking }: FooterProps) {
             </h4>
             <ul className="space-y-2.5">
               {[
-                { label: "Blog", href: "#" },
+                { label: "Ayurveda", href: "/ayurveda" },
+                { label: "Nearby Places", href: "/nearby-places" },
+                { label: "Joint Venture", href: "/joint-venture" },
                 { label: "Patient Stories", href: "/testimonials" },
-                { label: "Ayurveda Guide", href: "#" },
-                { label: "Gallery", href: "#" },
-                { label: "FAQs", href: "#" },
+                { label: "Gallery", href: "/gallery" },
+                { label: "Video Gallery", href: "/video-gallery" },
               ].map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-xs text-[#3D0004]/75 hover:text-[#b38e5d] transition-colors font-light">

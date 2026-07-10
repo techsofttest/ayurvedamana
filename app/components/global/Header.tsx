@@ -164,6 +164,7 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
                   {[
                     { label: "Home", href: "/" },
                     { label: "History", href: "/history" },
+                    { label: "Why Choose Us", href: "/why-choose-us" },
                     { label: "Physicians", href: "/physicians" },
                     { label: "Therapies", href: "/therapies" },
                     { label: "Special Treatments", href: "/special-treatments" },
@@ -259,7 +260,8 @@ export default function Header({ onOpenBooking, forceSolid = false }: HeaderProp
                   {[
                     { label: "Home", href: "/" },
                     { label: "History", href: "/history" },
-                    { label: "Physicians", href: "#why-choose" },
+                    { label: "Why Choose Us", href: "/why-choose-us" },
+                    { label: "Physicians", href: "/physicians" },
                     { label: "Therapies", href: "#treatments" },
                     { label: "Special Treatments", href: "#treatments" },
                     { label: "Wellness Treatments", href: "#wellness-packages" },
