@@ -156,6 +156,9 @@ export default function Footer({ onOpenBooking }: FooterProps) {
                 { label: "Gallery", href: "/gallery" },
                 { label: "Video Gallery", href: "/video-gallery" },
                 { label: "Contact Us", href: "/contact" },
+                { label: "Joint Venture", href: "/joint-venture" },
+                { label: "Ayurveda", href: "/ayurveda" },
+                { label: "Nearby Places", href: "/nearby-places" },
               ].map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-xs text-[#3D0004]/75 hover:text-[#b38e5d] transition-colors font-light">
@@ -174,7 +177,7 @@ export default function Footer({ onOpenBooking }: FooterProps) {
             <ul className="space-y-2.5">
               {[
                 { label: "Blog", href: "#" },
-                { label: "Patient Stories", href: "#testimonials" },
+                { label: "Patient Stories", href: "/testimonials" },
                 { label: "Ayurveda Guide", href: "#" },
                 { label: "Gallery", href: "#" },
                 { label: "FAQs", href: "#" },
